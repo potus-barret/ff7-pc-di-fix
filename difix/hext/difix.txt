@@ -1,0 +1,4 @@
+..\ff7.exe
+Delay=3000
+0041B09C = 83 3D 34 87 9A 00 00
+0041B0A9 = E8 C6 FA FF FF

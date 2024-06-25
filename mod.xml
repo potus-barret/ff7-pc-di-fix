@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>22ed7aef-254c-49cf-923f-32c146f1597f</ID>
+  <Name>Double input bugfix and configurable input repeat</Name>
+  <Category>Miscellaneous</Category>
+  <Author>Dig (aka potus-barret)</Author>
+  <Version>1.0</Version>
+  <Description>
+
+  BE GONE double input! May you never darken FF7 PC's door step again!!
+
+  Uses an unused flag in FF7 PC's code to prevent all input acting like key repeat (the cause of DI).
+
+  The port seems to have gotten input to a "good enough" state and moved on. This finishes the job.
+
+  Im in qhimm and "FF7 Speedruns and Research" discords if you want to find me and ask questions.
+
+  Write up with full explanation pending.
+
+  Ping me in discord (@_dig_) if you encounter any unexpected or undesired behaviour.
+  I have an avatar of Vageta with a pink shirt like below.
+
+  </Description>
+  <ReleaseNotes>Includes granular tweaking of auto/rapid fire/key repeat "delay" and "rate"</ReleaseNotes>
+  <ReleaseDate>2024-06-25T20:00:00.9401096+01:00</ReleaseDate>
+  <Link>https://github.com/potus-barret/ff7-pc-di-fix</Link>
+  <PreviewFile>di.png</PreviewFile>
+  <ModFolder Folder="difix" ActiveWhen="difix = 1" />
+
+  <ModFolder Folder="rate/250" ActiveWhen="rate = 250" />
+  <ModFolder Folder="rate/200" ActiveWhen="rate = 200" />
+  <ModFolder Folder="rate/190" ActiveWhen="rate = 190" />
+  <ModFolder Folder="rate/180" ActiveWhen="rate = 180" />
+  <ModFolder Folder="rate/170" ActiveWhen="rate = 170" />
+  <ModFolder Folder="rate/160" ActiveWhen="rate = 160" />
+  <ModFolder Folder="rate/150" ActiveWhen="rate = 150" />
+  <ModFolder Folder="rate/140" ActiveWhen="rate = 140" />
+  <ModFolder Folder="rate/130" ActiveWhen="rate = 130" />
+  <ModFolder Folder="rate/120" ActiveWhen="rate = 120" />
+  <ModFolder Folder="rate/110" ActiveWhen="rate = 110" />
+  <ModFolder Folder="rate/100" ActiveWhen="rate = 100" />
+  <ModFolder Folder="rate/90" ActiveWhen="rate = 90" />
+  <ModFolder Folder="rate/80" ActiveWhen="rate = 80" />
+  <ModFolder Folder="rate/70" ActiveWhen="rate = 70" />
+  <ModFolder Folder="rate/60" ActiveWhen="rate = 60" />
+  <ModFolder Folder="rate/40" ActiveWhen="rate = 40" />
+  <ModFolder Folder="rate/30" ActiveWhen="rate = 30" />
+  <ModFolder Folder="rate/20" ActiveWhen="rate = 20" />
+  <ModFolder Folder="rate/10" ActiveWhen="rate = 10" />
+  <ModFolder Folder="rate/0" ActiveWhen="rate = 0" />
+
+  <ModFolder Folder="delay/1000" ActiveWhen="delay = 1000" />
+  <ModFolder Folder="delay/950" ActiveWhen="delay = 950" />
+  <ModFolder Folder="delay/900" ActiveWhen="delay = 900" />
+  <ModFolder Folder="delay/850" ActiveWhen="delay = 850" />
+  <ModFolder Folder="delay/800" ActiveWhen="delay = 800" />
+  <ModFolder Folder="delay/750" ActiveWhen="delay = 750" />
+  <ModFolder Folder="delay/700" ActiveWhen="delay = 700" />
+  <ModFolder Folder="delay/650" ActiveWhen="delay = 650" />
+  <ModFolder Folder="delay/600" ActiveWhen="delay = 600" />
+  <ModFolder Folder="delay/550" ActiveWhen="delay = 550" />
+  <ModFolder Folder="delay/500" ActiveWhen="delay = 500" />
+  <ModFolder Folder="delay/450" ActiveWhen="delay = 450" />
+  <ModFolder Folder="delay/400" ActiveWhen="delay = 400" />
+  <ModFolder Folder="delay/350" ActiveWhen="delay = 350" />
+  <ModFolder Folder="delay/300" ActiveWhen="delay = 300" />
+  <ModFolder Folder="delay/250" ActiveWhen="delay = 250" />
+  <ModFolder Folder="delay/190" ActiveWhen="delay = 190" />
+  <ModFolder Folder="delay/180" ActiveWhen="delay = 180" />
+  <ModFolder Folder="delay/170" ActiveWhen="delay = 170" />
+  <ModFolder Folder="delay/160" ActiveWhen="delay = 160" />
+  <ModFolder Folder="delay/150" ActiveWhen="delay = 150" />
+  <ModFolder Folder="delay/140" ActiveWhen="delay = 140" />
+  <ModFolder Folder="delay/130" ActiveWhen="delay = 130" />
+  <ModFolder Folder="delay/120" ActiveWhen="delay = 120" />
+  <ModFolder Folder="delay/110" ActiveWhen="delay = 110" />
+  <ModFolder Folder="delay/100" ActiveWhen="delay = 100" />
+  <ModFolder Folder="delay/90" ActiveWhen="delay = 90" />
+  <ModFolder Folder="delay/80" ActiveWhen="delay = 80" />
+  <ModFolder Folder="delay/70" ActiveWhen="delay = 70" />
+  <ModFolder Folder="delay/60" ActiveWhen="delay = 60" />
+  <ModFolder Folder="delay/50" ActiveWhen="delay = 50" />
+  <ModFolder Folder="delay/40" ActiveWhen="delay = 40" />
+  <ModFolder Folder="delay/30" ActiveWhen="delay = 30" />
+  <ModFolder Folder="delay/20" ActiveWhen="delay = 20" />
+  <ModFolder Folder="delay/10" ActiveWhen="delay = 10" />
+  <ModFolder Folder="delay/0" ActiveWhen="delay = 0" />
+  <ModFolder Folder="delay/F" ActiveWhen="delay = 1" />
+
+  <ConfigOption>
+    <Type>Bool</Type>
+    <Option Value="0" Name="" PreviewFile="off.png" PreviewAudio="" />
+    <Option Value="1" Name="" PreviewFile="on.png" PreviewAudio="" />
+    <Default>0</Default>
+    <Name>Double input bugfix</Name>
+    <ID>difix</ID>
+    <Description>Enable/Disable double input fix</Description>
+  </ConfigOption>
+
+  <ConfigOption>
+    <Type>List</Type>
+    <Default>50</Default>
+    <ID>rate</ID>
+    <Name>Choose repeat rate in ms</Name>
+    <Description>Sets the time between each tick of auto/rapid fire. Bigger the number the longer it takes.
+
+To disable "delay" set "delay" to the same value as "rate".
+
+To disable auto/rapid fire/repeat set "delay" to "Infinity" at the bottom of the list.
+
+Setting "delay" or "rate" to infinity or times longer than default greatly increases the likely hood of encountering the double input bug. Thus it is recommended to enable the double input bug fix while doing this.</Description>
+    <Option Value="250" Name="250"/>
+    <Option Value="200" Name="200"/>
+    <Option Value="190" Name="190"/>
+    <Option Value="180" Name="180"/>
+    <Option Value="170" Name="170"/>
+    <Option Value="160" Name="160"/>
+    <Option Value="150" Name="150"/>
+    <Option Value="140" Name="140"/>
+    <Option Value="130" Name="130"/>
+    <Option Value="120" Name="120"/>
+    <Option Value="110" Name="110"/>
+    <Option Value="100" Name="100"/>
+    <Option Value="90" Name="90"/>
+    <Option Value="80" Name="80"/>
+    <Option Value="70" Name="70"/>
+    <Option Value="60" Name="60"/>
+    <Option Value="50" Name="50 (Default)"/>
+    <Option Value="40" Name="40"/>
+    <Option Value="30" Name="30"/>
+    <Option Value="20" Name="20"/>
+    <Option Value="10" Name="10"/>
+    <Option Value="0" Name="0"/>
+  </ConfigOption>
+
+  <ConfigOption>
+    <Type>List</Type>
+    <Default>200</Default>
+    <ID>delay</ID>
+    <Name>Choose repeat delay in ms</Name>
+    <Description>Sets the time between a button being pressed and auto/rapid fire begining. Bigger the number the longer it takes.
+
+To disable "delay" set "delay" to the same value as "rate".
+
+To disable auto/rapid fire/repeat set "delay" to "Infinity" at the bottom of the list.
+
+Setting "delay" or "rate" to infinity or times longer than default greatly increases the likely hood of encountering the double input bug. Thus it is recommended to enable the double input bug fix while doing this.</Description>
+    <Option Value="1000" Name="1000"/>
+    <Option Value="950" Name="950"/>
+    <Option Value="900" Name="900"/>
+    <Option Value="850" Name="850"/>
+    <Option Value="800" Name="800"/>
+    <Option Value="750" Name="750"/>
+    <Option Value="700" Name="700"/>
+    <Option Value="650" Name="650"/>
+    <Option Value="600" Name="600"/>
+    <Option Value="550" Name="550"/>
+    <Option Value="500" Name="500"/>
+    <Option Value="450" Name="450"/>
+    <Option Value="400" Name="400"/>
+    <Option Value="350" Name="350"/>
+    <Option Value="300" Name="300"/>
+    <Option Value="250" Name="250"/>
+    <Option Value="200" Name="200 (Default)"/>
+    <Option Value="190" Name="190"/>
+    <Option Value="180" Name="180"/>
+    <Option Value="170" Name="170"/>
+    <Option Value="160" Name="160"/>
+    <Option Value="150" Name="150"/>
+    <Option Value="140" Name="140"/>
+    <Option Value="130" Name="130"/>
+    <Option Value="120" Name="120"/>
+    <Option Value="110" Name="110"/>
+    <Option Value="100" Name="100"/>
+    <Option Value="90" Name="90"/>
+    <Option Value="80" Name="80"/>
+    <Option Value="70" Name="70"/>
+    <Option Value="60" Name="60"/>
+    <Option Value="50" Name="50"/>
+    <Option Value="40" Name="40"/>
+    <Option Value="30" Name="30"/>
+    <Option Value="20" Name="20"/>
+    <Option Value="10" Name="10"/>
+    <Option Value="0" Name="0"/>
+    <Option Value="1" Name="Infinity"/>
+  </ConfigOption>
+
+  <FFNxConfig />
+  <Variables />
+</ModInfo>
