@@ -4,7 +4,7 @@
   <Name>Double input bugfix and configurable input repeat</Name>
   <Category>Miscellaneous</Category>
   <Author>Dig (aka potus-barret)</Author>
-  <Version>1.0</Version>
+  <Version>1.1</Version>
   <Description>
 
   BE GONE double input! May you never darken FF7 PC's door step again!!
@@ -21,12 +21,14 @@
   I have an avatar of Vageta with a pink shirt like below.
 
   </Description>
-  <ReleaseNotes>Includes granular tweaking of auto/rapid fire/key repeat "delay" and "rate"</ReleaseNotes>
-  <ReleaseDate>2024-06-25T20:00:00.9401096+01:00</ReleaseDate>
+  <ReleaseNotes>Changed fix hext to only touch the 3 bytes it changes.
+Added infinity rate option to facilitate testing/reproducing the bug.</ReleaseNotes>
+  <ReleaseDate>2024-07-27</ReleaseDate>
   <Link>https://github.com/potus-barret/ff7-pc-di-fix</Link>
   <PreviewFile>di.png</PreviewFile>
   <ModFolder Folder="difix" ActiveWhen="difix = 1" />
 
+  <ModFolder Folder="rate/F" ActiveWhen="rate = 1" />
   <ModFolder Folder="rate/250" ActiveWhen="rate = 250" />
   <ModFolder Folder="rate/200" ActiveWhen="rate = 200" />
   <ModFolder Folder="rate/190" ActiveWhen="rate = 190" />
@@ -49,6 +51,7 @@
   <ModFolder Folder="rate/10" ActiveWhen="rate = 10" />
   <ModFolder Folder="rate/0" ActiveWhen="rate = 0" />
 
+  <ModFolder Folder="delay/F" ActiveWhen="delay = 1" />
   <ModFolder Folder="delay/1000" ActiveWhen="delay = 1000" />
   <ModFolder Folder="delay/950" ActiveWhen="delay = 950" />
   <ModFolder Folder="delay/900" ActiveWhen="delay = 900" />
@@ -85,7 +88,6 @@
   <ModFolder Folder="delay/20" ActiveWhen="delay = 20" />
   <ModFolder Folder="delay/10" ActiveWhen="delay = 10" />
   <ModFolder Folder="delay/0" ActiveWhen="delay = 0" />
-  <ModFolder Folder="delay/F" ActiveWhen="delay = 1" />
 
   <ConfigOption>
     <Type>Bool</Type>
@@ -109,6 +111,7 @@ To disable "delay" set "delay" to the same value as "rate".
 To disable auto/rapid fire/repeat set "delay" to "Infinity" at the bottom of the list.
 
 Setting "delay" or "rate" to infinity or times longer than default greatly increases the likely hood of encountering the double input bug. Thus it is recommended to enable the double input bug fix while doing this.</Description>
+    <Option Value="1" Name="Infinity"/>
     <Option Value="250" Name="250"/>
     <Option Value="200" Name="200"/>
     <Option Value="190" Name="190"/>
@@ -142,9 +145,10 @@ Setting "delay" or "rate" to infinity or times longer than default greatly incre
 
 To disable "delay" set "delay" to the same value as "rate".
 
-To disable auto/rapid fire/repeat set "delay" to "Infinity" at the bottom of the list.
+To disable auto/rapid fire/repeat set "delay" to "Infinity" at the top of the list.
 
 Setting "delay" or "rate" to infinity or times longer than default greatly increases the likely hood of encountering the double input bug. Thus it is recommended to enable the double input bug fix while doing this.</Description>
+    <Option Value="1" Name="Infinity"/>
     <Option Value="1000" Name="1000"/>
     <Option Value="950" Name="950"/>
     <Option Value="900" Name="900"/>
@@ -182,7 +186,6 @@ Setting "delay" or "rate" to infinity or times longer than default greatly incre
     <Option Value="20" Name="20"/>
     <Option Value="10" Name="10"/>
     <Option Value="0" Name="0"/>
-    <Option Value="1" Name="Infinity"/>
   </ConfigOption>
 
   <FFNxConfig />
