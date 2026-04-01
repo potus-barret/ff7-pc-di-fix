@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ID>22ed7aef-254c-49cf-923f-32c146f1597f</ID>
-  <Name>Double input bugfix and configurable input repeat</Name>
+  <Name>Double Input Bugfix (and menu input Qol)</Name>
   <Category>Miscellaneous</Category>
   <Author>Dig (aka potus-barret)</Author>
-  <Version>1.1</Version>
+  <Version>1.2</Version>
   <Description>
 
-  BE GONE double input! May you never darken FF7 PC's door step again!!
+  BE GONE double input! May you never darken FF7 PC's door again!!
 
+  Fix is enabled by default, you can just play once the mod is enabled.
+    
   Uses an unused flag in FF7 PC's code to prevent all input acting like key repeat (the cause of DI).
-
-  The port seems to have gotten input to a "good enough" state and moved on. This finishes the job.
 
   Im in qhimm and "FF7 Speedruns and Research" discords if you want to find me and ask questions.
 
-  Write up with full explanation pending.
-
+  The bugfix is now part of the game since the 2026 rerelease.
+  
   Ping me in discord (@_dig_) if you encounter any unexpected or undesired behaviour.
   I have an avatar of Vageta with a pink shirt like below.
 
   </Description>
-  <ReleaseNotes>Changed fix hext to only touch the 3 bytes it changes.
-Added infinity rate option to facilitate testing/reproducing the bug.</ReleaseNotes>
-  <ReleaseDate>2024-07-27</ReleaseDate>
+  <ReleaseNotes>Name change and description edits before submitting to catalog.
+I will be adding some menuing input Qol features this summer.
+Double input bugfix is now enabled by default, all other features are optional and disabled by default.</ReleaseNotes>
+  <ReleaseDate>2026-04-01</ReleaseDate>
   <Link>https://github.com/potus-barret/ff7-pc-di-fix</Link>
   <PreviewFile>di.png</PreviewFile>
   <ModFolder Folder="difix" ActiveWhen="difix = 1" />
@@ -93,8 +94,8 @@ Added infinity rate option to facilitate testing/reproducing the bug.</ReleaseNo
     <Type>Bool</Type>
     <Option Value="0" Name="" PreviewFile="off.png" PreviewAudio="" />
     <Option Value="1" Name="" PreviewFile="on.png" PreviewAudio="" />
-    <Default>0</Default>
-    <Name>Double input bugfix</Name>
+    <Default>1</Default>
+    <Name>Double Input Bugfix</Name>
     <ID>difix</ID>
     <Description>Enable/Disable double input fix</Description>
   </ConfigOption>
